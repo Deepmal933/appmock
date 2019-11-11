@@ -41,7 +41,7 @@
     "flexboxgrid": "^6.3.1",
     "jquery": "^3.3.1",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.4.0",
+    "mongoose": "^5.7.5",
     "narik-angular-color-picker": "^2.0.9",
     "ngx-chips": "^2.0.0-beta.0",
     "ngx-color-picker": "^7.2.0",
