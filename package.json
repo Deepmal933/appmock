@@ -29,7 +29,7 @@
     "angular-file": "^0.5.4",
     "angular4-files-upload": "^1.0.2",
     "animate.css": "^3.7.0",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "blob-util": "^2.0.2",
     "body-parser": "^1.18.3",
     "connect": "^3.6.6",
