@@ -1,0 +1,149 @@
+<div class="dashboard">
+        <div class="downloadpopup animated fadeIn" *ngIf="downloadpop">
+                <a class="close" (click)="downloaddialog()"></a>
+
+                <div class="dialog">
+                    <p>Select Mockup Size</p>
+                    <div style="padding:10px">
+                    <div class="row">
+                            <div class="col-xs-3" *ngFor="let item of downloadsize">
+                                <div class="box" [ngClass]="{'selected':item === selectedSize}" (click)="selectedSize = item">{{item}}</div></div>
+                                
+                            </div>
+                    <button class="download" (click)="downloadImage()" >Download</button>
+                    <button class="publish" (click)="publishdialog()">Publish to Dribbble</button>
+                </div>
+                </div>
+            </div>
+    <div class="popup animated fadeIn" *ngIf="publishpopup">
+            <a class="close" (click)="publishdialog()"></a>
+        <div class="uploaddribbble">
+            <div class="shotwrap">
+            <div class="shot">
+                <img [src]="shotimg" style="width:100%;height:100%;"/>
+            </div>
+            <div class="shotinfo">
+                <input type="text" [(ngModel)]="shottitle" class="title" placeholder="Shot Title">
+                <textarea [(ngModel)]="shotdes" class="des" placeholder="Shot Description"></textarea>
+
+                <tag-input [(ngModel)]='shottags' theme='minimal' [ripple]="false" [maxItems]="12" (onAdd)="onAdd($event)"></tag-input>
+<button class="publish" (click)="publishshot()">Publish to Dribbble</button>
+            </div>
+        </div>
+        </div>
+    </div>
+  <div class="content">
+     <div class="header">
+         <div class="row">
+             <div class="col-xs-8">
+                 <div class="box">
+                       <button (click)="logout()">Logout</button> <div class="user" [ngStyle]="{'background-image':'url('+avatar+')'}"></div>
+                 </div>
+             </div>
+           
+             <div class="col-xs-4 first-xs">
+                 <div class="box">
+                     <div class="logo">appmock</div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="gradient" *ngIf="gradpanel" [ngClass]="{'animated slideInLeft': gradpanel}">
+         <div class="title" (click)="gradpanel=false">
+                <i class="material-icons">
+                        keyboard_arrow_left
+                        </i>&nbsp;&nbsp;Select Gradient Background
+         </div>
+            <div class="cols">
+                    <div class="row">
+                            <div class="col-xs-3 screen" *ngFor="let item of gradients;let i = index;">
+                                <div class="box" [ngStyle]="{'background':'linear-gradient('+item.degree+'deg, '+item.color1+','+ item.color2+')'}" (click)="applygrad(i)"></div>
+                            </div>
+                             
+                                                       </div>  
+                                                            
+                                                            
+                                                            </div> 
+     </div>
+     <div class="upload animated slideInLeft" *ngIf="openupload">
+            <div class="title" (click)="closeupload()">
+                <span> <i class="material-icons">
+                        keyboard_arrow_left
+                        </i>&nbsp;&nbsp;</span>
+                   Upload Files
+             </div>        <div class="upload-block cursor-pointer"
+        (ngxf-select)="uploadFiles($event)"
+        (ngxf-drop)="uploadFiles($event)"
+        [ngxf-validate]="{min:5000, max:2566621 ,skipInvalid: true}"
+        drop-class="drop"
+        accept="image/*"
+        multiple>
+       <img src="../../assets/upload.png">
+        <b>Drag & Drop your design</b>
+            <p>PNG & JPG File only</p>
+      </div>
+     </div>
+ 
+     <div class="sidepanel">
+         <div class="device">       <ng-select class="deviceselect" [items]="devicetype"
+            [loading]="false"
+            [selectOnTab]="true"
+            [clearable]="false"
+            [(ngModel)]="selectedDevice">
+            </ng-select>
+         </div>
+         <div class="screens">
+             <div class="cols">
+                 <div class="row">
+                         <div class="col-xs-6 screen" *ngFor="let item of iphonemock;let i = index" [hidden]="item.screens != nofile || !(selectedDevice === 'All' || selectedDevice === item.cat)">
+                             <div class="box" [ngClass]="{'selected':item.id==selected}"><img src="{{item.src}}" id="template" style="width: 100%;height:100%;" (click)="changeMock(item.id)"></div>
+                         </div>
+                          
+                                                    </div>  
+                                                         
+                                                         
+                                                         </div> 
+                                                              
+                         
+         </div>
+     </div>
+     <div class="editor">
+     <div class="toolpanel" >
+         <div *ngIf="!disabled">
+        <input 
+        class="selectcolor"
+        [style.background]="color"
+        [cpPresetColors]="['#DBE6F2','#E0E5E9','#DCE6EA','#E0E4E6','#EFEEF9','#EDEDF3','#F6E9E9','#8E9BD5','#91D5F3','#EB9BFF','#AF9BFF','#FFA9D2','#FFBCC3','#FFE5BC','8AE6D6']"
+        [cpPosition]="'bottom'"
+        [(colorPicker)]="color"
+        (colorPickerChange)="colorChange($event)"
+        readonly
+        />
+        <div class="grad" (click)="gradpanel=!gradpanel"></div>
+        <ng-select *ngIf="radiusselect" [items]="radius"
+        [loading]="false"
+        placeholder="Corner Radius"
+        [selectOnTab]="true"
+        [clearable]="false"
+        (change)="changeRadius()"
+        [(ngModel)]="selectedRadius">
+</ng-select>
+        <div class="action">
+                
+            <button class="downloadbtn" style="width:126px !important;" (click)="openupload=true;uploadagain=true"><i class="material-icons">
+                refresh
+                </i>&nbsp;Upload Again</button>
+         
+            <button class="downloadbtn" (click)="downloaddialog()">Download/Publish</button></div>
+        </div>
+        </div>
+ 
+     <div class="editorspace">
+         <div class="mockup" [ngStyle]="{'background': backcolor,'border':backborder}">
+<div class="loader"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
+           <img id="mockimg"/>
+         </div>
+     </div>
+    </div>
+ </div>
+  </div>

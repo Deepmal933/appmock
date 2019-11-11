@@ -1,0 +1,13 @@
+.drop-zone[_ngcontent-c1] {
+    margin: auto;
+    height: 100% !important;
+    border: 1px dashed #609fff !important;
+    border-radius: 3px !important;
+}
+.content[_ngcontent-c1]{
+  height: 100% !important;
+}
+
+.over[_ngcontent-c1]{
+  background-color:#f2f8ff !important;
+}

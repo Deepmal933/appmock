@@ -1,0 +1,617 @@
+.dashboard{
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #F8FAFD;
+}
+
+
+
+.content{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+}
+
+.selectcolor{
+    width: 30px;
+    height: 30px;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+
+
+}
+
+
+
+.grad{
+    width: 32px;
+    height: 32px;
+    margin-left: 15px;
+    border-radius: 4px;
+    outline: none;
+    background: linear-gradient(45deg,#00c4ff,#6f87ff,#ff4df1);
+    cursor: pointer; 
+}
+
+.header{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  z-index: 105;
+  background: #ffffff;
+  border-bottom: 1px solid #e9edf7;
+}
+
+.header .row{
+    width: 100%;
+}
+
+.header .row .box{
+    display: flex;
+}
+
+.header .row button{
+    background: rgba(0,0,0,0.1);
+    color: #FFF;
+    width: 100px;
+    height: 36px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.header .col-xs-8{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user{
+    background: #e9edf7;
+    width: 35px;
+    height: 35px;
+    border-radius: 40px;
+    background-size: 100% 100%;
+    margin-left: 15px;
+}
+
+.homebtn{
+height: 45px;
+width: 150px;
+background: rgba(255,255,255,0.1);
+color: #FFF;
+border: none;
+margin-left: 10px;
+font-size: 13px;
+border-radius: 5px;
+
+}
+.logo{
+    color:#000000;
+    font-size: 18px;
+    font-weight: 600;
+    display:flex;
+    align-items:center;
+    height: 50px;
+}
+
+.upload{
+    width: 300px;
+    height: 100%;
+    background: #ffffff;
+    position: fixed;
+    top: 50px;
+    z-index: 101;
+    border-right: 1px solid #e9edf7;
+    left: 0;
+    box-sizing: border-box;
+    bottom: 0;
+    border-right: none;
+}
+
+.gradient{
+    width: 300px;
+    height: 100%;
+    background: #ffffff;
+    position: fixed;
+    top: 50px;
+    z-index: 103;
+    left: 0;
+    box-sizing: border-box;
+    bottom: 0;
+    border-right: 1px solid #e9edf7;
+}
+.gradient .title{
+
+        height: 50px;
+        align-items: center;
+        display: flex;
+        padding-left: 10px;
+
+        color: #FFF;
+        font-size: 13px;
+        border-bottom: 1px solid #ffffff0f;
+}
+
+.upload .title{
+    height: 50px;
+        align-items: center;
+        display: flex;
+        color: #516390;
+        padding-left: 10px;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.upload .title span{
+display: flex;
+}
+
+
+
+.upload-block{
+    height: 250px;
+    background: #e9edf7;
+    display: flex;
+    padding: 20px;
+    flex-flow: column;
+    margin: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 6px;
+    justify-content: center;
+}
+
+.upload-block img{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.upload-block b{
+    font-size: 13px;
+    color: #516390;
+    font-weight: 600;
+}
+
+.upload-block p{
+    font-size: 11px;
+    color: #94a0bb;
+    font-weight: 400;
+}
+
+.drop{
+    background: #b6c4e482;  
+}
+
+.sidepanel{
+    width: 300px;
+    height: 100%;
+    background: #ffffff;
+    position: fixed;
+    top: 50px;
+    z-index: 100;
+    left: 0;
+    bottom: 0;
+    border-right: 1px solid #e9edf7;
+}
+
+.sidepanel .screens{
+    width: 100%;
+    height: 1200px;
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+        box-sizing: border-box;
+    padding: 5px;
+}
+
+.sidepanel select{
+    width: 100%;
+    border: none;
+    height: 40px;
+    background: #dee3f1;
+}
+
+.screens .box{
+    width: 100%;
+    padding-top: 75%;
+    position: relative;
+    background: #dee3f1;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+}
+
+.gradient .cols .box{
+    width: 100%;
+    padding-top: 75%;
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+}
+
+.screens .selected{
+    background: #b5cbed;
+}
+
+
+
+.screens .row{
+    width: 100%;
+    margin: 0;
+}
+
+.screens .col-xs-6,.gradient .cols .col-xs-6{
+    padding: 5px;
+}
+.device,.gradient .cols{
+    padding: 5px 10px;
+}
+
+
+
+.toolpanel{
+    position: fixed;
+    top:50px;
+    left: 300px;
+    right: 0;
+    z-index: 70;
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    
+    background: #FFF;
+    border-bottom: 1px solid #e9edf7;
+}
+
+.toolpanel div{
+    display: flex;
+    align-items: center;
+}
+
+.editorspace{
+    top:100px;
+    position: fixed;
+    left: 300px;
+    padding: 170px;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mockup{
+    width:100%;
+    position: relative;
+padding-top: 75%;
+    background: #e9edf7;
+    z-index: 1;
+    border:1px solid rgba(180, 123, 123, 0.01)
+}
+
+#mockimg{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.action{
+    position: absolute;
+    right: 15px;
+}
+
+.downloadbtn{
+   
+    height: 35px;
+    padding-top: 2px;
+    text-align: center;
+    background: #f8fafd;
+    border: none;
+    border-radius: 3px;
+    width: 116px;
+    color: #FFF;
+    position: relative;
+    margin-left: 5px;
+    font-size: 11px;
+    background: #0070e0;
+
+}
+
+
+.downloadbtn i.material-icons {
+       color: #ffffff;
+    font-size: 16px;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#template{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.sidepanel .device{
+    padding: 10px;
+}
+
+.loader{
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    right: 0;
+    z-index: 200;
+    width: 100%;
+    background: #e9edf7;
+    justify-content: center;
+    height: 100%;
+}
+
+
+
+.popup{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 70px 150px;
+	height: 100%;
+	z-index: 800;
+    display: flex;
+    align-items: center;
+
+	background:rgba(7, 23, 64, 0.89);
+	box-sizing: border-box;;
+}
+
+.uploaddribbble{
+	background: #FFF;
+	width: 100%;
+	padding-top: 45%;
+	position: relative;
+	border-radius: 10px;
+    display: flex;
+    flex: 0 0 auto;
+
+}
+.shotwrap{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    
+    display: flex;
+
+}
+.shot{
+    width: 60%;
+    height: 100%;
+      border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+    background: #EEE;
+}
+.shotinfo{
+    width: 40%;
+    height: 100%;
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    overflow: scroll;
+    box-sizing: border-box;
+    background: url(../../assets/dribbbleback.png);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    
+    border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+}
+
+.shotinfo .title{
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    border:none;
+    background: #e9edf769;
+    border-radius: 4px;
+    padding-left: 10px;
+    color: #000;
+    font-size: 12px;
+    
+    outline: none;
+}
+.shotinfo .des{
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    background: #e9edf769;
+margin-top: 10px;
+    border: none;
+    padding-top: 10px;
+    border-radius: 4px;
+    padding-left: 10px;
+    color: #000;
+    font-size: 12px;
+    outline: none; 
+}
+
+.shotinfo .publish{
+    background: #ea4c89    ;
+    height: 40px;
+    bottom: 0px;
+  
+    position: sticky;
+    margin-top: 10px;
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    z-index: 801;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.shot img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.close {
+    position: fixed;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    background: #FFF;
+    cursor: pointer;
+  }
+  .close:hover > .close:before, .close:after {
+      background-color: #303758;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 15px;
+    top: 8px;
+    width: 2px;
+    background-color: #7a8398;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+
+  .downloadpopup{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 70px 150px;
+	height: 100%;
+	z-index: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background: rgba(18, 7, 48, 0.5);
+	box-sizing: border-box;;
+}
+
+.downloadpopup{
+    z-index: 801 !important;
+}
+
+.downloadpopup .dialog {
+     width: 250px;
+     background: #FFF;
+     border-radius: 8px;
+}
+  
+.downloadpopup .dialog .download{
+  background: #4e83ff;
+    height: 45px;
+    bottom: 0px;
+  font-size: 13px;
+    position: sticky;
+    margin-top: 10px;
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    z-index: 801;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.downloadpopup .dialog .publish{
+    background: #ea4c89    ;
+    height: 45px;
+    bottom: 0px;
+    font-size: 13px;
+    position: sticky;
+    margin-top: 10px;
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    z-index: 799;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.downloadpopup .dialog .ng-select{
+    margin: 0px !important;
+}
+
+.downloadpopup .dialog p{
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 1px solid #EEE;
+    font-size: 14px;
+}
+
+.downloadpopup .dialog .box{
+    padding: 10px;
+    border: 1px solid #00000000;
+    margin: 0;
+    border-radius: 4px;
+    color: #384654;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.downloadpopup .dialog .box.selected{
+    padding: 10px;
+    border: 1px solid #4e83ff;
+    margin: 0;
+    border-radius: 4px;
+    color: #4e83ff;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+

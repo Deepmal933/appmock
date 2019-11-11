@@ -1,0 +1,146 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-content">   
+                <a *ngIf="back" (click)="backk()"><i class="material-icons">keyboard_backspace</i>&nbsp;&nbsp;Back</a>
+                <h1 id="logo">mock<span id="design">.design</span></h1>
+                <p>Showcase your great design using our Free Mockup tool.</p></div>
+        
+            </div>
+            <div class="content isOpen">
+                    <div class="step1" [hidden]="!step1">
+                            <h1>
+                              Select Mockup
+                            </h1>
+
+                            <div class="row">
+                                    <div class="col-xs-3">
+                                        <div class="box" style="background:url(../assets/mock1.png);" (click)="selectMock(1)"></div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                            <div class="box" style="background:url(../assets/mock2.png);" (click)="selectMock(2)"></div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                                <div class="box"></div>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                    <div class="box"></div>
+                                                    
+                                                </div>
+                                                <div class="col-xs-3">
+                                                        <div class="box"></div>
+                                                        
+                                                    </div>
+                                                    <div class="col-xs-3">
+                                                            <div class="box"></div>
+                                                            
+                                                        </div>
+                                                        <div class="col-xs-3">
+                                                                <div class="box"></div>
+                                                                
+                                                            </div>
+                                                            <div class="col-xs-3">
+                                                                    <div class="box"></div>
+                                                                    
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                        <div class="box"></div>
+                                                                        
+                                                                    </div>
+                                                                    <div class="col-xs-3">
+                                                                            <div class="box"></div>
+                                                                            
+                                                                        </div>
+                                                                        <div class="col-xs-3">
+                                                                                <div class="box"></div>
+                                                                                
+                                                                            </div>
+                                                                            <div class="col-xs-3">
+                                                                                    <div class="box"></div>
+                                                                                    
+                                                                                </div>
+                                                                                <div class="col-xs-3">
+                                                                                        <div class="box"></div>
+                                                                                        
+                                                                                    </div>
+                                </div>                            <!-- <input type="file" (change)="onFileChanged($event)">
+                            <button (click)="onUpload()">Upload!</button> -->
+                          
+                          </div>
+                          <div class="step2 animated slideInRight" [hidden]="!step2">
+                                        <file-drop  (onFileDrop)="dropped($event)" 
+                                        (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" >
+                                        <div style="text-align:center;"><img src="../assets/upload.png" style="width:100px;"><br>
+                                            <p style="font-size:30px;color:#1b76ff;font-weight: 300">Drag & Drop Files</p>
+                                        <p style="font-size:15px;color:#95abc4;font-weight: 300">Upload exact 2 screens Images ans their size must be within 900px X 1500px</p>
+                                            
+                                        </div>
+                                        
+                                        </file-drop>
+                                        <div class="upload-table" style="display: none">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="upload-name-style">
+                                                    <tr *ngFor="let item of files; let i=index">
+                                                        <td><strong>{{ item.relativePath }}</strong></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <input (keyup)="onKey($event)">
+                                        </div>
+
+
+                          </div>
+
+                          <div class="loading" [hidden]="!loading">
+                              <div class="boxsize">
+                                    <div class="loadingcontainer" style="text-align:center;">
+                                            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                                            <p style="font-size:15px;color:#95abc4;font-weight: 300">Generating Mockup ... It will take few seconds.</p>
+
+                                    </div>
+                              </div>
+
+                          </div>
+                          <div class="step3 " [hidden]="!step3">
+                                <h1>Here is your mockup ...</h1>
+
+                                <div class="row">
+
+                                        <div class="col-xs-8">
+                                            <div class="box" id="rtt"> <img src="{{mockup}}" style="width:100%;"></div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                                <div class="box">
+                                                        <input [(colorPicker)]="color" [style.background]="color"/>
+
+                                                <button (click)="downloadImage()">Download</button>
+                                                <button>Publish to Dribble</button>
+                                            </div>
+                                            </div>
+       
+
+                               
+                          </div>
+
+                          <div class="colormodal" >
+                              <div class="primarycolors">
+<div class="colorbox" [ngStyle]="{'background':color}" *ngFor="let color of colors;let i = index" (click)="selectColor(i)" [ngClass]="{'selected': selectedColor == i}"></div>
+                          </div>
+                          <div class="divider"></div>
+                          <input type="text" id="hexinput" value="{{selectedColor}}"></div>
+
+                        
+            </div>
+</div>
+
+
+
+
+
+
+
