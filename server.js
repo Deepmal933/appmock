@@ -18,7 +18,7 @@ app.use(express.static(__dirname + '/dist/frontapp'));
 var mongoose = require('mongoose');
 
 //Set up default mongoose connection
-var mongoDB = 'mongodb://deepmal933:9333deeP@ds229474.mlab.com:29474/heroku_ck5qfsp5';
+var mongoDB = 'mongodb://deepmal933:iUjp5a!EDS7@ds033599.mlab.com:33599/heroku_m1gkthpl';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
@@ -191,7 +191,7 @@ function getUser(jwtString,res)
 
     jwt.verify(jwtString,"deepmal933",function(err,decoded){
         if(err){
-            console.log("decodeerror");
+            console.log("decodeerror",err);
             return res.status(500).send("error");
         }
         console.log("decoded:"+decoded)
