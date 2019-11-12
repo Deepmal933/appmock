@@ -31,9 +31,9 @@ export function tokenGetter() {
 }
 
 const route:Routes = [
-  {path:'',redirectTo:'/login',pathMatch:'full'},
+  {path:'',redirectTo:'/app',pathMatch:'full'},
   {path:'login',component:LoginComponent,},
-  {path:'app',component:DashboardComponent,canActivate: [AuthGuard]},
+  {path:'app',component:DashboardComponent},
   {path:'**',redirectTo:'/',pathMatch:'full'}
 ];
 
