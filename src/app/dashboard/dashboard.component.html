@@ -35,13 +35,9 @@
   <div class="content">
      <div class="header">
          <div class="row">
-             <div class="col-xs-8">
-                 <div class="box">
-                       <button (click)="logout()">Logout</button> <div class="user" [ngStyle]="{'background-image':'url('+avatar+')'}"></div>
-                 </div>
-             </div>
+             
            
-             <div class="col-xs-4 first-xs">
+             <div class="col-xs-12 first-xs">
                  <div class="box">
                      <div class="logo">appmock</div>
                  </div>
@@ -79,9 +75,11 @@
         accept="image/*"
         multiple>
        <img src="../../assets/upload.png">
-        <b>Drag & Drop your design</b>
+        <b>Drag & Drop App Screenshot</b>
             <p>PNG & JPG File only</p>
       </div>
+      <button class="downloadbtn" (click)="usedemo()">Use Demo Screenshot</button>
+
      </div>
  
      <div class="sidepanel">

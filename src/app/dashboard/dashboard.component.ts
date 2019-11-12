@@ -144,6 +144,21 @@ export class DashboardComponent implements OnInit{
 
   }
 
+  usedemo(){
+  fetch('https://i.ibb.co/yh7dQsQ/screenshot.png').then(data=>{
+    data.blob().then(blob=>{
+      let metadata = {
+        type: 'image/jpeg'
+      };
+      let file = new File([blob], "test.jpg", metadata);
+      this.uploadFiles([file])
+    }
+
+    )
+  });
+  
+
+  }
 
   uploadFiles(files: File[] | FileError): void {
 
